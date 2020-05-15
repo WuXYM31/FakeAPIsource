@@ -1,30 +1,38 @@
 {
-  "sites": [
-    { "id": 1, 
-      "geoinfo":  [50.12, 23.56],
-      "props":{
-        "customer": "SSAB",
-        "sitename": "Sahara",
-        "rated power": 600
+  "sites":[
+    {
+      "id":1,
+      "name":"battery",
+      "latitude":25,
+      "longitude":25
       },
-      "devices": [
-        {"id": 100, "type": "battery"},
-        {"id": 101, "type": "transformer"}
-      ],
-      "ps_status": 0
+      {
+        "id":2,
+        "name":"Site2_Demo",
+        "latitude":12,
+        "longitude":32
+        }
+  ],
+  "devices":[
+    {
+        "device_id": 12,
+        "device_name": "Bus_0",
+        "parent_id": null
     },
-    { "id": 2, 
-      "geoinfo":  [28.12, 87.56],
-      "props":{
-        "customer": "National Grid",
-        "sitename": "site007",
-        "rated power": 300
-      },
-      "devices": [
-        {"id": 200, "type": "battery"},
-        {"id": 201, "type": "transformer"}
-      ],
-      "ps_status": 3
+    {
+        "device_id": 2,
+        "device_name": "Bms_0",
+        "parent_id": 12
+    },
+    {
+        "device_id": 3,
+        "device_name": "Gc_0",
+        "parent_id": 12
+    },
+    {
+        "device_id": 4,
+        "device_name": "Rack_32",
+        "parent_id": 2
     }
-  ]
+]
 }
